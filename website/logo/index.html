@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>(Animated) Text Fills - Demo 12</title>
+    <meta name="description" content="How to Create (Animated) Text Fills with various techniques" />
+    <meta name="keywords" content="text, fill, animation, svg, background-clip, clip, mask" />
+    <meta name="author" content="Yoksel for Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style12.css" />
+    <!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+<script>
+    $('a').click( function(e) {e.preventDefault();  return false; } );
+</script>
+<body>
+    <div class="container">
+        <div class="content">
+            <svg viewBox="0 0 500 800">
+
+                <!-- Symbol -->
+                
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="13%" dy="">
+                        <a onclick="window.top.location.href='../index.php';">Smart</a>
+                    </text>
+                    <text text-anchor="middle" x="50%" y="25%" dy="">
+                        <a onclick="window.top.location.href='../index.php';">Estate</a>
+                    </text>
+                </symbol>
+                </a>
+                <!-- Duplicate symbols -->
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+
+            </svg>
+        </div>
+       
+    </div>
+    <!-- /container -->
+</body>
+
+</html>

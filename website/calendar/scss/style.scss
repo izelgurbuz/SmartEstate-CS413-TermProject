@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+$size: 300px;
+
+$bgcol: rgb(255, 255, 255); //rgba(0, 128, 128, 0.62);
+
+body {
+  margin: 0;
+  top: 0;
+  background-color: $bgcol;
+  background-image: radial-gradient($bgcol, rgba(0, 0, 0, .2));
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  align-items: center;
+
+  .elemento {
+    min-width: $size;
+    height: $size;
+    margin: 10px auto;
+    //text-align: center;
+  }
+}
+
+$rowHeight: 75px;
+$bordo: 5px;
+$fontColor: #333;
+
+$bDebug: false;
+
+.calendario {
+  width: 100%;
+  @if $bDebug {
+    border: 1px grey solid;
+  }
+  padding: 10px;
+  .cal-header {
+    margin: 5px $bordo 10px;
+    font-family: 'Lato', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+  .cal-body {
+    //border: 1px grey solid;
+  }
+  .cal-row {
+    border-top: 1px lightgrey solid;
+    border-right: 1px lightgrey solid;
+    &:last-child {
+      border-bottom: 1px lightgrey solid;
+    }
+    position: relative;
+    display: block;
+    height: $rowHeight;
+    color: $fontColor;
+    transition: all ease 0.9s;
+
+    &:hover {
+      .badge {
+        width: 100%;
+      }
+      .date, .info, .info a {
+        color: #f8f8ff;
+      }
+    }
+    .badge {
+      @if $bDebug {
+        border: 1px yellow solid;
+      }
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      margin: 0 0 0 0px;
+      transition: .9s ease-in-out;
+      width: $bordo;
+      background-color: #333333;
+    }
+    .rosso {
+      background-color: #dd3333;
+    }
+    .blu {
+      background-color: #3333dd;
+    }
+    .verde {
+      background-color: #33dd33;
+    }
+
+    .date, .info {
+      @if $bDebug {
+        border: 1px lightblue solid;
+      }
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      transition: all ease 0.9s;
+    }
+    .date {
+      width: 15%;
+      margin: 0 10px 0 $bordo*2;
+      font-family: 'Lato', 'Open Sans', sans-serif;
+      text-align: center;
+      .month {
+        text-transform: uppercase;
+        line-height: 0.5;
+        margin-top: 10px;
+      }
+      .day {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    }
+    .info {
+      text-align: left;
+      a {
+        color: $fontColor;
+        //font-weight: 700;
+        text-decoration: none;
+        transition: all ease 0.9s;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .info-time, .info-loc {
+        font-size: .8em;
+      }
+    }
+  }
+}

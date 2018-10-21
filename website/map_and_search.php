@@ -1,0 +1,210 @@
+<!-- Map
+================================================== -->
+<div id="map-container" class="homepage-map margin-bottom-0">
+
+    <div id="map">
+        <!-- map goes here -->
+    </div>
+
+    <!-- Map Navigation -->
+	<a href="#" id="scrollEnabling" title="Enable or disable scrolling on map">Enable Scrolling</a>
+	<ul id="mapnav-buttons">
+	    <li><a href="#" id="prevpoint" title="Previous point on map">Prev</a></li>
+	    <li><a href="#" id="nextpoint" title="Next point on mp">Next</a></li>
+	</ul>
+
+
+	<!-- Main Search Container -->
+	<div class="main-search-container">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+					<!-- Trigger Button -->
+					<a href="#" class="adv-search-btn button">Advanced Search <i class="fa fa-caret-up"></i></a>
+
+					<!-- Main Search -->
+					<form class="main-search-form" method="post" action="advancedsearch.php">
+						
+						<!-- Type -->
+						<div class="search-type" style="display: none;">
+							<label class="active"><input class="first-tab" name="tab" checked="checked" type="radio">Any Status</label>
+							<label><input name="tab" type="radio">For Sale</label>
+							<label><input name="tab" type="radio">For Rent</label>
+							<div class="search-type-arrow"></div>
+						</div>
+
+						
+						<!-- Box -->
+						<div class="main-search-box">
+							
+						<!-- Row With Forms -->
+							<div class="row with-forms">
+
+								<!-- Status -->
+								<div class="col-md-3 col-sm-6">
+									<select data-placeholder="Any Status" class="chosen-select-no-single" >
+										<option>Any Status</option>	
+										<option>For Sale</option>
+										<option>For Rent</option>
+									</select>
+								</div>
+
+								<!-- Property Type -->
+								<div class="col-md-3 col-sm-6">
+									<select data-placeholder="Any Type" class="chosen-select-no-single" >
+										<option>Any Type</option>	
+										<option>Apartments</option>
+										<option>Houses</option>
+										<option>Commercial</option>
+										<option>Garages</option>
+										<option>Lots</option>
+									</select>
+								</div>
+
+								<!-- Main Search Input -->
+								<div class="col-md-6">
+									<div class="main-search-input">
+										<input type="text" placeholder="Enter address e.g. street, city or state" value=""/>
+										<button  class="button">Search</button>
+									</div>
+								</div>
+
+							</div>
+							<!-- Row With Forms / End -->
+
+
+							<!-- Row With Forms -->
+							<div class="row with-forms">
+
+								<!-- Min Price -->
+								<div class="col-md-3 col-sm-6">
+									
+									<!-- Select Input -->
+									<div class="select-input disabled-first-option">
+										<input type="text" placeholder="Min Area" data-unit="Sq Ft">
+										<select>	
+											<option>Min Area</option>
+											<option>300</option>
+											<option>400</option>
+											<option>500</option>
+											<option>700</option>
+											<option>800</option>
+											<option>1000</option>
+											<option>1500</option>
+										</select>
+									</div>
+									<!-- Select Input / End -->
+
+								</div>
+
+								<!-- Max Price -->
+								<div class="col-md-3 col-sm-6">
+									
+									<!-- Select Input -->
+									<div class="select-input disabled-first-option">
+										<input type="text" placeholder="Max Area" data-unit="Sq Ft">
+										<select>	
+											<option>Max Area</option>
+											<option>300</option>
+											<option>400</option>
+											<option>500</option>
+											<option>700</option>
+											<option>800</option>
+											<option>1000</option>
+											<option>1500</option>
+										</select>
+									</div>
+									<!-- Select Input / End -->
+
+								</div>
+
+
+								<!-- Min Price -->
+								<div class="col-md-3 col-sm-6">
+									
+									<!-- Select Input -->
+									<div class="select-input disabled-first-option">
+										<input type="text" placeholder="Min Price" data-unit="USD">
+										<select>		
+											<option>Min Price</option>
+											<option>1 000</option>
+											<option>2 000</option>	
+											<option>3 000</option>	
+											<option>4 000</option>	
+											<option>5 000</option>	
+											<option>10 000</option>	
+											<option>15 000</option>	
+											<option>20 000</option>	
+											<option>30 000</option>
+											<option>40 000</option>
+											<option>50 000</option>
+											<option>60 000</option>
+											<option>70 000</option>
+											<option>80 000</option>
+											<option>90 000</option>
+											<option>100 000</option>
+											<option>110 000</option>
+											<option>120 000</option>
+											<option>130 000</option>
+											<option>140 000</option>
+											<option>150 000</option>
+										</select>
+									</div>
+									<!-- Select Input / End -->
+
+								</div>
+
+
+								<!-- Max Price -->
+								<div class="col-md-3 col-sm-6">
+									
+									<!-- Select Input -->
+									<div class="select-input disabled-first-option">
+										<input type="text" placeholder="Max Price" data-unit="USD">
+										<select>		
+											<option>Max Price</option>
+											<option>1 000</option>
+											<option>2 000</option>	
+											<option>3 000</option>	
+											<option>4 000</option>	
+											<option>5 000</option>	
+											<option>10 000</option>	
+											<option>15 000</option>	
+											<option>20 000</option>	
+											<option>30 000</option>
+											<option>40 000</option>
+											<option>50 000</option>
+											<option>60 000</option>
+											<option>70 000</option>
+											<option>80 000</option>
+											<option>90 000</option>
+											<option>100 000</option>
+											<option>110 000</option>
+											<option>120 000</option>
+											<option>130 000</option>
+											<option>140 000</option>
+											<option>150 000</option>
+										</select>
+									</div>
+									<!-- Select Input / End -->
+
+								</div>
+
+							</div>
+							<!-- Row With Forms / End -->
+
+						</div>
+						<!-- Box / End -->
+
+					</form>
+					<!-- Main Search -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main Search Container / End -->
+
+</div>
